@@ -5,16 +5,16 @@ const closeBtn = document.querySelector(".close");
 document.querySelectorAll('.card').forEach(card => {
   card.onclick = function() {
     modal.style.display = "block";
-    // This pulls the link from your data-url attribute
+    // This pulls the link from data-url attribute
     iframe.src = this.getAttribute('data-url'); 
   }
 });
 
 closeBtn.onclick = function() {
   modal.style.display = "none";
-  iframe.src = ""; // This "kills" the flipbook so it's fresh next time
+  iframe.src = ""; // 
 }
-  // Wait for images to load so the math is accurate
+  // Wait for images to load
   window.onload = function() {
     var elem = document.querySelector('.gallery');
     var msnry = new Masonry(elem, {
@@ -22,7 +22,7 @@ closeBtn.onclick = function() {
       itemSelector: '.card',
       columnWidth: '.card',
       percentPosition: true,
-      gutter: 20 // This creates the 20px space between your tiles
+      gutter: 20 // This creates the 20px space between tiles
     });
   };
 // Target your gallery

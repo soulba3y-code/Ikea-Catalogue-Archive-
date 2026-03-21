@@ -1,13 +1,13 @@
 <header class="top-bar">
     <h1>
-        <a href="Ikea Archive.html" style="text-decoration: none; color: inherit;">
+        <a href="index.html" style="text-decoration: none;">
             Ikea Catalogue Archive
         </a>
     </h1>
     
     <nav class="nav-links">
-        <a href="index.html" class="nav-link"><h2>Catalogues</h2></a>
-        <a href="About.html"><h2>About Us</h2></a>
+        <a href="Landing.html" class="nav-link"><h2>Catalogues</h2></a> <!--creates link to a specific page-->
+        <a href="about.html"><h2>About Us</h2></a> <!--creates link to a specific page-->
     </nav>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </header>
@@ -20,9 +20,9 @@ Our mission is to aggregate these historical snapshots into a single, accessible
 
 <style> 
    .top-bar {
-    display: flex;                /* Aligns children horizontally */
+    display: flex;                /* Aligns horizontally */
     justify-content: space-between; /* Pushes Title to left, Nav to right */
-    align-items: flex-start;      /* Aligns the tops of the text perfectly */
+    align-items: flex-start;      /* Aligns the tops of the text */
     padding: 20px 5%;             /* Adds space from the screen edges */
 }
 
@@ -31,15 +31,13 @@ Our mission is to aggregate these historical snapshots into a single, accessible
     gap: 40px;                    /* Adds space between the two links */
 }
 
-/* Optional: Keep your headers from adding extra invisible space */
 h1, h2 {
     margin: 0;
     line-height: 1.1;
 }
 
 a {
-    text-decoration: none;        /* Removes the default blue underline */
-    color: inherit;               /* Keeps the text black */
+    text-decoration: none;        /* Removes the blue underline */
 }
     body {
     background-color: #FFDA1A; /* This is the classic IKEA yellow */
