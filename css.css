@@ -115,13 +115,6 @@ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 text-align: justify;
 }
 
-footer { 
-    text-align: center; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: -0.05em;
-    color: #0058AB;
-}
-
 .modal {
   display: none;
   position: fixed;
