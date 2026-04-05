@@ -25,7 +25,7 @@ closeBtn.onclick = function() {
       gutter: 20 // This creates the 20px space between tiles
     });
   };
-// Target your gallery
+// Target gallery
   var grid = document.querySelector('.gallery');
 
   // Wait for all images to actually download
@@ -38,4 +38,28 @@ closeBtn.onclick = function() {
       gutter: 20 // This is the space between the tiles
     });
   });
+
+function filterCatalogues() {
+    let input = document.getElementById('yearSearch').value;
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        let year = card.getAttribute('data-year');
+        if (year && year.includes(input)) {
+            card.style.display = "block"; // Ensure it's block
+        } else {
+            card.style.display = "none";
+        }
+    });
+
+    // CRITICAL: This line forces the grid to "snap" the remaining items to the top
+    if (typeof msnry !== 'undefined') {
+        msnry.layout();
+    }
+}
+
+// This tells the grid to fix itself after every image is loaded
+imagesLoaded('.gallery', function() {
+    msnry.layout();
+});
 

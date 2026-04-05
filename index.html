@@ -5,8 +5,10 @@
         <!-- The below addresses the top bar text, styled in CSS -->
       <header class="top-bar">
     <a href="index.html">
-        <h1>Ikea <br> Catalogue <br> Archive</h1>
-    </a>
+       <div class="text">
+  <h1>Ikea<br>Catalogue<br>Archive</h1>
+  <p class="subtitle">EXPLORE THE EVOLUTION OF INTERIOR DESIGN FROM 1950 TO 2021.</p>
+</div>
 
     <nav class="nav-links">
         <a href="Landing.html" class="nav-link">Catalogues</a>
@@ -18,7 +20,15 @@
         <!-- Linking the CSS sheet so I can style  -->
     </head>
     <body>
-     
+
+ <div class="image-wrapper">
+  <img src="ikea1981.png" alt="IKEA 1950 Catalogue">
+</div>  
+
+<div class="red-catalogue">
+  <img src="ikea1954.png" alt="IKEA 1954 Catalogue">
+</div> 
+
   </body>
 </head>
    <style>
@@ -36,5 +46,74 @@
 .top-bar a {
     text-decoration: none; /* removes the underline */
 }
+img {
+  width: 30vw; /* Takes up 30% of the screen width */
+  height: auto;
+  position: absolute; /* This allows it to move anywhere */
+  width: 300px;       /* Keeps the image at a readable size */
+  height: auto;
+  
+  /* Positioning coordinates */
+  top: 80px;          /* Distance from the top of the screen */
+  right: 80px;        /* Moves it toward the 'Catalogues' link */
+  
+  z-index: 10;        /* Ensures the image sits ON TOP of the text */
+  
+  /* Optional: Adds a slight tilt for that archival feel */
+  transform: rotate(-3deg); 
+}
+h1 {
+  position: relative; /* Text needs a position to use z-index */
+  z-index: 2;
+  margin-top: 70px; /* Increase this number to move it further down */  
+}
 
+img {
+  position: absolute; 
+  z-index: 1;         
+}
+
+.red-catalogue {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  
+  /* Adjust these numbers to move it exactly where you want */
+  top: -40px;   /* Lower number moves it UP, higher moves it DOWN */
+  right: 450px; /* Higher number moves it LEFT, lower moves it RIGHT */
+  
+  z-index: 1;  /* This keeps it behind the blue text (h1 has z-index: 2) */
+  transform: rotate(7deg);
+   /* A slight tilt to the right */
+}
+.subtitle {
+  display: block;
+  /* Remove the -827px margin! */
+  margin-left: 0; 
+  
+  color: #0058AB;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: bold;
+
+  font-size: clamp(1rem, 2vw, 1.5rem); 
+  
+  /* Adjust this to control the gap between the title and subtitle */
+  margin-top: 10px; 
+  text-align: left;
+  position: relative;
+  margin-top: 20px; /* Pulls it up closer to the title */
+  position: relative;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Scales smoothly between screen sizes */
+  margin-top: 1rem;
+}
+@media (max-width: 768px) {
+  
+  img {
+    display: none; /* Hides images to keep the text readable on mobile */
+  }
+  
+  .subtitle {
+    max-width: 90vw; /* Ensures the subtitle doesn't stretch too wide on small screens */
+  }
+}
    </style>

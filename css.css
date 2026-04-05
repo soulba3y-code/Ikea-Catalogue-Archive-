@@ -8,7 +8,7 @@ SS
   /* This ensures the 40px padding doesn't push the gallery off-screen */
   padding: 40px;
   box-sizing: border-box; 
-  
+  margin: 20px auto;
   width: 100%;
   position: relative;
   background-color: #FFDA1A; /* Keeps your IKEA yellow background */
@@ -113,6 +113,7 @@ h2 {
 p {
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 text-align: justify;
+
 }
 
 .modal {
@@ -213,5 +214,13 @@ font-weight: bold;
   html, body {
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.search-container input {
+    width: 150px;
+    padding: 2px;
+    border: 3px solid #0058AB;     /* IKEA Blue */
+    font-weight: bold;
+    outline: none;
 }
 

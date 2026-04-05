@@ -7,6 +7,10 @@
     <a href="index.html">
         <h1>Ikea Catalogue Archive</h1>
     </a>
+
+    <div class="search-container">
+        <input type="text" id="yearSearch" placeholder="Search by year..." onkeyup="filterCatalogues()">
+    </div>
     
     <nav class="nav-links">
         <a href="Landing.html" class="nav-link">Catalogues</a>
@@ -20,372 +24,375 @@
 <link rel="stylesheet" href="css.css"> 
 
  <body>
+  
+
  <div class="gallery">  
-<div class="card" data-url="https://online.fliphtml5.com/eounq/fjsa/">
+<div class="card" data-year="1950" data-url="https://online.fliphtml5.com/eounq/fjsa/"> <!-- link to the first catalogue, goes on for about 72 editions -->
   <img src="ikea1950.png" alt="1950">
   <div class="overlay-text">1950</div>
 </div>
 
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1980/">
+<div class="card" data-year="1980" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1980/">
   <img src="ikea1980.png" alt="1980">
   <div class="overlay-text">1980</div>
 </div>
 
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1959/">
+<div class="card" data-year="1959" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1959/">
   <img src="ikea1959.png" alt="1959">
   <div class="overlay-text">1959</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2014-compressed/">
+<div class="card" data-year="2014" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2014-compressed/">
   <img src="ikea2014.png" alt="2014">
   <div class="overlay-text">2014</div>
 </div>
 
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1996/">
+<div class="card" data-year="1996" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1996/">
   <img src="ikea1996.png" alt="1996">
   <div class="overlay-text">1996</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2021-compressed/">
+<div class="card" data-year="2021" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2021-compressed/">
   <img src="ikea2021.png" alt="2021">
   <div class="overlay-text">2021</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1963/">
+<div class="card" data-year="1963" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1963/">
   <img src="ikea1963.png" alt="1963">
   <div class="overlay-text">1963</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2007/">
+<div class="card" data-year="2007" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2007/">
   <img src="ikea2007.png" alt="2007">
   <div class="overlay-text">2007</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1974/">
+<div class="card" data-year="1974" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1974/">
   <img src="ikea1974.png" alt="1974">
   <div class="overlay-text">1974</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2000/">
+<div class="card" data-year="2000" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2000/">
   <img src="ikea2000.png" alt="2000">
   <div class="overlay-text">2000</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1956/">
+<div class="card" data-year="1956" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1956/">
   <img src="ikea1956.png" alt="1956">
   <div class="overlay-text">1956</div>
 </div>
 
 
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1988/">
+<div class="card" data-year="1988" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1988/">
   <img src="ikea1988.png" alt="1988">
   <div class="overlay-text">1988</div>
 </div>
 
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1960/">
+<div class="card"  data-year="1960" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1960/">
   <img src="ikea1960.png" alt="1960">
   <div class="overlay-text">1960</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1990/">
+<div class="card" data-year="1990" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1990/">
   <img src="ikea1990.png" alt="1990">
   <div class="overlay-text">1990</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2018-compressed/">
+<div class="card" data-year="2018" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2018-compressed/">
   <img src="ikea2018.png" alt="2018">
   <div class="overlay-text">2018</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2020-compressed/">
+<div class="card" data-year="2020" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2020-compressed/">
   <img src="ikea2020.png" alt="2020">
   <div class="overlay-text">2020</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1953/">
+<div class="card" data-year="1953" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1953/">
   <img src="ikea1953.png" alt="1953">
   <div class="overlay-text">1953</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1984/">
+<div class="card" data-year="1984" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1984/">
   <img src="ikea1984.png" alt="1984">
   <div class="overlay-text">1984</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1979/">
+<div class="card" data-year="1979" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1979/">
   <img src="ikea1979.png" alt="1979">
   <div class="overlay-text">1979</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2003/">
+<div class="card" data-year="2003" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2003/">
   <img src="ikea2003.png" alt="2003">
   <div class="overlay-text">2003</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2010/">
+<div class="card" data-year="2010" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2010/">
   <img src="ikea2010.png" alt="2010">
   <div class="overlay-text">2010</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1966/">
+<div class="card" data-year="1966" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1966/">
   <img src="ikea1966.png" alt="1966">
   <div class="overlay-text">1966</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1970/">
+<div class="card" data-year="1970" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1970/">
   <img src="ikea1970.png" alt="1970">
   <div class="overlay-text">1970</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1992/">
+<div class="card" data-year="1992" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1992/">
   <img src="ikea1992.png" alt="1992">
   <div class="overlay-text">1992</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/mmip/"> <!-- This links the flipbook from flipHTML5 into the webpage. I was able to customize the reading experience and details on fLipHTML5-->
+<div class="card" data-year="2012" data-url="https://online.fliphtml5.com/eounq/mmip/"> <!-- This links the flipbook from flipHTML5 into the webpage. I was able to customize the reading experience and details on fLipHTML5-->
   <img src="ikea2012.png" alt="2012"> <!-- image that appears on the webpage so you can see it-->
   <div class="overlay-text">2012</div> <!-- text that appears when you hover over the catalogue-->
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1998/">
+<div class="card" data-year="1998" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1998/">
   <img src="ikea1998.png" alt="1998">
   <div class="overlay-text">1998</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2005/">
+<div class="card" data-year="2005" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2005/">
   <img src="ikea2005.png" alt="2005">
   <div class="overlay-text">2005</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1989/">
+<div class="card" data-year="1989" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1989/">
   <img src="ikea1989.png" alt="1989">
   <div class="overlay-text">1989</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1977/">
+<div class="card" data-year="1977" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1977/">
   <img src="ikea1977.png" alt="1977">
   <div class="overlay-text">1977</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1951/">
+<div class="card" data-year="1951" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1951/">
   <img src="ikea1951.png" alt="1951">
   <div class="overlay-text">1951</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2017-compressed/">
+<div class="card" data-year="2017" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2017-compressed/">
   <img src="ikea2017.png" alt="2017">
   <div class="overlay-text">2017</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1971/">
+<div class="card" data-year="1971" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1971/">
   <img src="ikea1971.png" alt="1971">
   <div class="overlay-text">1971</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1955/">
+<div class="card" data-year="1955" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1955/">
   <img src="ikea1955.png" alt="1955">
   <div class="overlay-text">1955</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1965/">
+<div class="card" data-year="1965" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1965/">
   <img src="ikea1965.png" alt="1965">
   <div class="overlay-text">1965</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2009/">
+<div class="card" data-year="2009" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2009/">
   <img src="ikea2009.png" alt="2009">
   <div class="overlay-text">2009</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1973/">
+<div class="card" data-year="1973" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1973/">
   <img src="ikea1973.png" alt="1973">
   <div class="overlay-text">1973</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2001/">
+<div class="card" data-year="2001" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2001/">
   <img src="ikea2001.png" alt="2001">
   <div class="overlay-text">2001</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2019-compressed/">
+<div class="card" data-year="2019" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2019-compressed/">
   <img src="ikea2019.png" alt="2019">
   <div class="overlay-text">2019</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1968/">
+<div class="card" data-year="1968" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1968/">
   <img src="ikea1968.png" alt="1968">
   <div class="overlay-text">1968</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1985/">
+<div class="card" data-year="1985" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1985/">
   <img src="ikea1985.png" alt="1985">
   <div class="overlay-text">1985</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2015-compressed/">
+<div class="card" data-year="2015" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2015-compressed/">
   <img src="ikea2015.png" alt="2015">
   <div class="overlay-text">2015</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1954/">
+<div class="card" data-year="1954" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1954/">
   <img src="ikea1954.png" alt="1954">
   <div class="overlay-text">1954</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1999/">
+<div class="card" data-year="1999" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1999/">
   <img src="ikea1999.png" alt="1999">
   <div class="overlay-text">1999</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1961/">
+<div class="card" data-year="1961" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1961/">
   <img src="ikea1961.png" alt="1961">
   <div class="overlay-text">1961</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1995/">
+<div class="card" data-year="1995" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1995/">
   <img src="ikea1995.png" alt="1995">
   <div class="overlay-text">1995</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1958/">
+<div class="card" data-year="1958" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1958/">
   <img src="ikea1958.png" alt="1958">
   <div class="overlay-text">1958</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2013-compressed/">
+<div class="card" data-year="2013" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2013-compressed/">
   <img src="ikea2013.png" alt="2013">
   <div class="overlay-text">2013</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1962/">
+<div class="card" data-year="1962" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1962/">
   <img src="ikea1962.png" alt="1962">
   <div class="overlay-text">1962</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1975/">
+<div class="card" data-year="1975" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1975/">
   <img src="ikea1975.png" alt="1975">
   <div class="overlay-text">1975</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2002/">
+<div class="card" data-year="2002" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2002/">
   <img src="ikea2002.png" alt="2002">
   <div class="overlay-text">2002</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1987/">
+<div class="card" data-year="1987" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1987/">
   <img src="Ikea1987.png" alt="1987">
   <div class="overlay-text">1987</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1952/">
+<div class="card" data-year="1952" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1952/">
   <img src="ikea1952.png" alt="1952">
   <div class="overlay-text">1952</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2011-compressed/">
+<div class="card" data-year="2011" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2011-compressed/">
   <img src="ikea2011.png" alt="2011">
   <div class="overlay-text">2011</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1978/">
+<div class="card" data-year="1978" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1978/">
   <img src="ikea1978.png" alt="1978">
   <div class="overlay-text">1978</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2008/">
+<div class="card" data-year="2008" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2008/">
   <img src="ikea2008.png" alt="2008">
   <div class="overlay-text">2008</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1957/">
+<div class="card" data-year="1957" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1957/">
   <img src="ikea1957.png" alt="1957">
   <div class="overlay-text">1957</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1981/">
+<div class="card" data-year="1981" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1981/">
   <img src="ikea1981.png" alt="1981">
   <div class="overlay-text">1981</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1969/">
+<div class="card" data-year="1969" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1969/">
   <img src="ikea1969.png" alt="1969">
   <div class="overlay-text">1969</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1986/">
+<div class="card" data-year="1986" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1986/">
   <img src="ikea1986.png" alt="1986">
   <div class="overlay-text">1986</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1972/">
+<div class="card" data-year="1972" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1972/">
   <img src="ikea1972.png" alt="1972">
   <div class="overlay-text">1972</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2016-compressed/">
+<div class="card" data-year="2016" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2016-compressed/">
   <img src="ikea2016.png" alt="2016">
   <div class="overlay-text">2016</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1993/">
+<div class="card" data-year="1993" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1993/">
   <img src="ikea1993.png" alt="1993">
   <div class="overlay-text">1993</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1967/">
+<div class="card" data-year="1967" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1967/">
   <img src="ikea1967.png" alt="1967">
   <div class="overlay-text">1967</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2006/">
+<div class="card" data-year="2006" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2006/">
   <img src="ikea2006.png" alt="2006">
   <div class="overlay-text">2006</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1983/">
+<div class="card" data-year="1983" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1983/">
   <img src="ikea1983.png" alt="1983">
   <div class="overlay-text">1983</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1991/">
+<div class="card" data-year="1991" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1991/">
   <img src="ikea1991.png" alt="1991">
   <div class="overlay-text">1991</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1976/">
+<div class="card" data-year="1976" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1976/">
   <img src="ikea1976.png" alt="1976">
   <div class="overlay-text">1976</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2004/">
+<div class="card" data-year="2004" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-2004/">
   <img src="ikea2004.png" alt="2004">
   <div class="overlay-text">2004</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1997/">
+<div class="card" data-year="1997" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1997/">
   <img src="ikea1997.png" alt="1997">
   <div class="overlay-text">1997</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1964/">
+<div class="card" data-year="1964" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1964/">
   <img src="ikea1964.png" alt="1964">
   <div class="overlay-text">1964</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1982/">
+<div class="card" data-year="1982" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1982/">
   <img src="ikea1982.png" alt="1982">
   <div class="overlay-text">1982</div>
 </div>
 
-<div class="card" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1994/">
+<div class="card" data-year="1994" data-url="https://online.fliphtml5.com/eounq/IKEA-Museum---sv-1994/">
   <img src="ikea1994.png" alt="1994">
   <div class="overlay-text">1994</div>
 </div>
+
 
 
 <div id="previewModal" class="modal"> 
@@ -407,7 +414,6 @@
    
    <!-- End of footer  -->
 
-  
     </body> 
     
 <style> 
@@ -451,9 +457,10 @@ a {
 /* Responsive adjustment */
 @media (max-width: 768px) {
   .card {
-    width: 45%; /* 2 columns on tablets */
+    width: 45%; /* 2 columns on tablets: update this */
   }
 }
+
 footer { 
     text-align: center; 
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
