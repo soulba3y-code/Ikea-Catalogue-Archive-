@@ -474,5 +474,14 @@ footer {
   }
 }
 
+/* This rule only applies to screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .top-bar {
+        padding: 20px 15px; /* Adds space on the left and right */
+        flex-direction: column; /* Stacks the logo and links vertically if they overlap */
+        gap: 15px;
+        text-align: center;
+    }
+}
 </style>
 </html> 
