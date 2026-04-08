@@ -1,17 +1,19 @@
 SS
 .gallery {
-  display: grid;
-  /* This creates the 3 columns */
-  grid-template-columns: repeat(3, 1fr); 
-  /* This adds space between the catalogues */
-  gap: 20px; 
-  /* This ensures the 40px padding doesn't push the gallery off-screen */
+  display: block; /* This creates the 3 columns */
+  grid-template-columns: repeat(3, 1fr);  /* This adds space between the catalogues */
+  gap: 20px; /* the 40px padding doesn't push the gallery off-screen */
   padding: 40px;
   box-sizing: border-box; 
   margin: 20px auto;
   width: 100%;
   position: relative;
   background-color: #FFDA1A; /* Keeps your IKEA yellow background */
+  flex-wrap: wrap;
+  justify-content: center; /* Centers the results */
+  min-height: 500px;       /* Keeps space open for results */
+  height: auto;
+
 }
 
 .overlay-text {
@@ -83,7 +85,7 @@ h1 {
 
 h3 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: -0.05em; /* This address the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
+    letter-spacing: -0.05em; /* This addresses the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
     font-size: 22px; /* size of font */
      text-decoration: none;
      color: #0058AB;
@@ -91,14 +93,14 @@ h3 {
 
 h2 {
    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   letter-spacing: -0.05em; /* This address the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
+   letter-spacing: -0.05em; /* This addresses the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
    font-size: 22px; /* size of font */
     text-decoration: none;
     color: #0058AB;
 }
 .nav-link {
  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-   letter-spacing: -0.05em; /* This address the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
+   letter-spacing: -0.05em; /* This addresses the kerning. I need to fix the spacing between the words 'catalogue' and 'About Us' */
    font-size: 22px; /* size of font */
    color: black;
    text-decoration: none;
@@ -147,13 +149,15 @@ text-align: justify;
 }
 
 .gallery {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px;           /* Adds space between the cards */
   padding: 40px;       /* Adds space around the edge of the screen */
   background-color: #FFDA1A; /* IKEA yellow background */
   column-count: 3; /* Divide into 3 columns */
   column-gap: 20px;
+  max-width: 1200px; /* Adjust based on your design */
+  min-height: 500px;
 
 }
 
@@ -168,6 +172,7 @@ text-align: justify;
   position: relative;
   width: 100%;
   margin: 0;
+  transition: transform 0.4s ease, opacity 0.3s ease; /* Makes the snap back look smooth */
 
 }
 
@@ -224,3 +229,17 @@ font-weight: bold;
     outline: none;
 }
 
+footer {
+    clear: both; /* Ensures the footer is below all content */
+    position: relative; 
+    width: 100%;
+    margin: 40px 0;      /* Adds space above and below */
+    display: flex;       /* Use flexbox to center content */
+    flex-direction: column;
+    align-items: center;  /* Centers the text horizontally */
+    text-align: center; /* Centers the text within the footer */
+    left: 0;
+    right: 0;
+    font-family: 'Impact', sans-serif;
+    color: #0058AB;
+}

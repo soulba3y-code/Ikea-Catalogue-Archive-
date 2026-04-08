@@ -1,4 +1,4 @@
-const modal = document.getElementById("previewModal");
+const modal = document.getElementById("previewModal"); // used google gemini for the javascript parts as I am not good at java. Please see works cited // 
 const iframe = document.getElementById("imgPreview");
 const closeBtn = document.querySelector(".close");
 
@@ -52,7 +52,7 @@ function filterCatalogues() {
         }
     });
 
-    // CRITICAL: This line forces the grid to "snap" the remaining items to the top
+    
     if (typeof msnry !== 'undefined') {
         msnry.layout();
     }
@@ -63,3 +63,35 @@ imagesLoaded('.gallery', function() {
     msnry.layout();
 });
 
+const searchInput = document.querySelector('.search-container input');
+const cards = document.querySelectorAll('.card');
+
+
+// ... inside your searchInput.addEventListener('input', () => { ...
+
+  cards.forEach(card => {
+    const year = card.getAttribute('data-year');
+    if (year.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+
+  
+  setTimeout(() => {
+    if (typeof msnry !== 'undefined') {
+      msnry.reloadItems(); // Forget the old positions
+      msnry.layout();      // Snap the remaining ones to the top
+    }
+  }, 10);
+
+  var msnry = new Masonry('.gallery', {
+  itemSelector: '.card',
+  columnWidth: '.card', // Use the card width as the guide
+  gutter: 20,           // Space between cards
+  horizontalOrder: true, // This keeps them in the order they appear in your HTML
+  percentPosition: true
+});
+
+// I attempted to fix the search results so that each catalogues when searched for would snap to the top of the page instead of leaving a gap where the hidden catalogues are. i struggled with this and I made the decision to just leave it as it is with the gaps because It looked worse in my opinion. The catalogues were scattered everywhere randomly and were much smaller when I attempted to make this work. I tried to get help with gemini but I found that wasnt working either. I do know this has to do the masonry grid layout and gemini was attempting to override it but it just wasn't coming out the way I wanted so I left it as it.  
