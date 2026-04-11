@@ -468,21 +468,33 @@ a {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
     .top-bar {
-        padding: 20px 15px; /* Adds space on the left and right */
-        flex-direction: column; /* Stacks the links vertically if they overlap */
-        gap: 15px;
-        text-align: center;
         display: flex;
-        flex-wrap: wrap;       /* Allows links to move to a new line if needed */
-        justify-content: center; /* Centers everything on the tablet */
-        padding: 10px 20px;    /* Adds safe padding on the sides */
-        gap: 15px;             /* Creates consistent space between items */
-        width: 100%;           /* Ensures it spans the full width */
-        box-sizing: border-box; /* Includes padding in the width calculation */
+        flex-direction: column; /* Stacks Title and Links to save horizontal space */
+        align-items: center;    /* Centers everything */
+        justify-content: center;
+        width: 100% !important;
+        left: 0 !important;
+        margin: 0 !important;
+        padding: 15px 0;
+        box-sizing: border-box;
     }
-  }
+
+    .nav-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .top-bar h1, .logo a {
+        font-size: 8vw; 
+        text-align: center;
+        white-space: nowrap; 
+    }
+}
 
 
 </style>
