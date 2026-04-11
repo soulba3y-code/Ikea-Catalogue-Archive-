@@ -8,7 +8,7 @@ SS
   margin: 20px auto;
   width: 100%;
   position: relative;
-  background-color: #FFDA1A; /* Keeps your IKEA yellow background */
+  background-color: #FFDA1A; /* IKEA yellow background */
   flex-wrap: wrap;
   justify-content: center; /* Centers the results */
   min-height: 500px;       /* Keeps space open for results */
@@ -108,7 +108,7 @@ h2 {
     
 }
     body {
-    background-color: #FFDA1A; /* This is the classic IKEA yellow */
+    background-color: #FFDA1A; /* classic IKEA yellow */
     margin: 0;                 /* Removes default white border around the edge */
     padding: 0;                /* Removes default padding */
 }
@@ -156,7 +156,7 @@ text-align: justify;
   background-color: #FFDA1A; /* IKEA yellow background */
   column-count: 3; /* Divide into 3 columns */
   column-gap: 20px;
-  max-width: 1200px; /* Adjust based on your design */
+  max-width: 1200px;
   min-height: 500px;
 
 }
@@ -197,28 +197,30 @@ font-weight: bold;
   max-width: 100%;
 }
 .nav-links {
-    display: flex;       /* This turns on the flexible layout */
-    gap: 24px;           /* This creates exactly 24px of space between the links */
+    display: flex;       /* flexible layout */
+    gap: 24px;           /* 24px of space between the links */
     align-items: center; /* Keeps them vertically aligned */
 }
 
 .nav-link {
     text-decoration: none; /* Removes the underline */
-    white-space: nowrap;   /* Prevents "About Us" from breaking into two lines */
+    white-space: nowrap;   /* Keeps "About Us" on one line */
 }
 
   .top-bar {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px; /* Match the 20px padding you have on the .card */
-  max-width: 1500px; /* Match the card width */
-  margin: 0 auto;    /* Center it like the card */
+  padding: 20px; /* Match the 20px padding on the .card */
+  max-width: 1500px; /* Match card width */
+  margin: 0 auto;    /* Center like the card */
   background-color: #FFDA1A;
 }
   html, body {
   max-width: 100%;
-  overflow-x: hidden;
+    overflow-x: hidden; /* Prevents the horizontal scroll bar */
+    margin: 0;
+    padding: 0;
 }
 
 .search-container input {
@@ -234,7 +236,7 @@ footer {
     position: relative; 
     width: 100%;
     margin: 40px 0;      /* Adds space above and below */
-    display: flex;       /* Use flexbox to center content */
+    display: flex;       /* center content */
     flex-direction: column;
     align-items: center;  /* Centers the text horizontally */
     text-align: center; /* Centers the text within the footer */
@@ -242,4 +244,51 @@ footer {
     right: 0;
     font-family: 'Impact', sans-serif;
     color: #0058AB;
+}
+
+/* Tablet and Phone View */
+@media screen and (max-width: 1024px) {
+    
+    /* 1. Fix the Header/Navigation */
+    .top-bar {
+        padding: 10px 5%;
+        flex-direction: column; /* Stacks 'Catalogues' and 'About Us' */
+        gap: 10px;
+    }
+
+    /* 2. Fix the Title and Subtitle */
+    .hero-text, .title-group {
+        margin-left: 0 !important;
+        padding: 20px 5%;
+        text-align: center; /* Centers title on mobile for better balance */
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 12vw; /* Title scales with screen width */
+        line-height: 1;
+    }
+
+    .subtitle {
+        margin-left: 0 !important; /* Removes that -827px shift */
+        margin-top: 15px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* 3. Fix the Catalogue Images (The "Empty Space") */
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 5%;
+    }
+
+    .card {
+        width: 90% !important; /* Makes images fill the screen width */
+        position: relative !important; /* Disables Masonry's absolute pinning */
+        top: 0 !important;
+        left: 0 !important;
+        margin-bottom: 30px;
+    }
 }
