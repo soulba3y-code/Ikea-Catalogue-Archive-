@@ -306,3 +306,8 @@ footer {
         padding-top: 80px; 
     }
 }
+
+input[type="text"] {
+    max-width: 80%;               /* Prevents the search bar from stretching the screen */
+    margin: 10px auto;
+}
