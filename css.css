@@ -261,8 +261,6 @@ footer {
         display: flex;
         flex-direction: row;    /* Keep links side-by-side unless very small */
         justify-content: space-between; 
-        padding: 15px;
-        background-color: #FFDA1A; 
         z-index: 1000;          /* Stays above images */
         box-sizing: border-box;
     }
@@ -296,10 +294,10 @@ footer {
     }
 
     .card {
-        width: 90% !important; /* Makes images fill the screen width */
-        position: relative !important; /* Disables Masonry's absolute pinning */
-        top: 0 !important;
-        left: 0 !important;
+        width: 90%; /* Makes images fill the screen width */
+        position: relative; /* Disables Masonry's absolute pinning */
+        top: 0;
+        left: 0;
         margin-bottom: 30px;
     }
     body {
