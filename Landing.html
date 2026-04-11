@@ -458,7 +458,7 @@ a {
 
 @media (max-width: 768px) {
   .card {
-    width: 90%; /* # of columns on tablet (1 column), updated to 85% this should fix the weird gap on the left hand side */
+    width: 85%; /* updated to 85% this should fix the weird gap on the left hand side */
   }
 }
 
@@ -469,16 +469,24 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
+    /* Reset the main containers to fill the screen exactly */
+    html, body, .main-container, .wrapper {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+    }
+
+    /* Fix the top-bar width and alignment */
     .top-bar {
+        width: 100% !important;
+        left: 0 !important;
+        padding: 10px 5%; /* Adds 5% safe space on each side */
+        box-sizing: border-box; /* Includes padding in the 100% width */
         display: flex;
-        flex-direction: column; /* Stacks Title and Links to save horizontal space */
-        align-items: center;    /* Centers everything */
-        justify-content: center;
-        width: 100%;
-        left: 0;
-        margin: 0;
-        padding: 15px 0;
-        box-sizing: border-box;
+        justify-content: space-between;
+        flex-wrap: nowrap; /* Keeps links on one line if possible */
     }
 
     .nav-links {
