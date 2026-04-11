@@ -261,6 +261,7 @@ footer {
         display: flex;
         flex-direction: row;    /* Keep links side-by-side unless very small */
         justify-content: space-between; 
+        padding: 15px;
         z-index: 1000;          /* Stays above images */
         box-sizing: border-box;
     }
