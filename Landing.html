@@ -458,20 +458,20 @@ a {
 
 @media (max-width: 768px) {
   .card {
-    width: 85%; /* updated to 85% this should fix the weird gap on the left hand side */
-  }
+    width: 85%; /* no longer need this line as the gallery is now block and not masonry, so the cards will automatically stack on top of each other and fill the width of the screen */
+}
 }
 
 @media (max-width: 480px) {
   .card {
-    width: 100%; /* 1 column on mobile */
+    width: 100%; /* no longer need this line as the gallery is now block and not masonry, so the cards will automatically stack on top of each other and fill the width of the screen */
   }
 }
 
 @media screen and (max-width: 1024px) {
     .top-bar {
         display: flex;
-        flex-direction: column; /* Stacks Title and Links to save horizontal space */
+        flex-direction: column; /* Stacks Title and Links to save space */
         align-items: center;    /* Centers everything */
         justify-content: center;
         width: 100%;
@@ -503,20 +503,20 @@ a {
         white-space: nowrap; 
     }
     .gallery {
-    display: block !important;    /* Breaks the Masonry grid logic for tablet */
-    width: 100% !important;
-    padding: 0 20px !important;   /* Provides a clean 20px edge on both sides */
+    display: block;    /* Breaks the Masonry grid logic for tablet */
+    width: 100%;
+    padding: 20px;   /* Provides a clean 20px edge on both sides */
     box-sizing: border-box;
-    margin: 0 auto !important;
+    margin: 0 auto;
 }
 
 .card {
-    width: 100% !important;       /* Forces one image per row to fill the space */
+    width: 100% ;       /* Forces one image per row to fill the space */
     max-width: 500px;             /* Keeps them from getting too huge on tablet */
-    margin: 20px auto !important; /* Centers each image individually */
-    position: relative !important;
-    left: 0 !important;
-    top: 0 !important;
+    margin: 20px auto ; /* Centers each image individually */
+    position: relative ; /* Allows for absolute positioning of the overlay text */
+    left: 0 ; /* Resets any previous positioning from desktop */
+    top: 0 ; /* Resets any previous positioning from desktop */
 }
 body {
         padding-top: 210px; /* Pushes content down further on smaller screens */

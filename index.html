@@ -33,15 +33,15 @@
 </head>
    <style>
     h1 {
-      font-size: 15vw;
+      font-size: 15vw; /* Title scales with screen width */
       color: #0058AB;
       
     }
 
     body {
-    background-color: #FFDA1A; /* This is the classic IKEA yellow */
-    margin: 0;                 /* Removes default white border around the edge */
-    padding: 0;                /* Removes default padding */
+    background-color: #FFDA1A; /* classic IKEA yellow */
+    margin: 0;                 
+    padding: 0;                
 }
 .top-bar a {
     text-decoration: none; /* removes the underline */
@@ -49,23 +49,22 @@
 img {
   width: 30vw; /* Takes up 30% of the screen width */
   height: auto;
-  position: absolute; /* This allows it to move anywhere */
+  position: absolute; 
   width: 300px;       /* Keeps the image at a readable size */
   height: auto;
   
-  /* Positioning coordinates */
+  
   top: 80px;          /* Distance from the top of the screen */
   right: 80px;        /* Moves it toward the 'Catalogues' link */
   
-  z-index: 10;        /* Ensures the image sits ON TOP of the text */
-  
-  /* Optional: Adds a slight tilt for that archival feel */
-  transform: rotate(-3deg); 
+  z-index: 10;        /* image sits on top of the text */
+  transform: rotate(-3deg); /* Adds a slight tilt for that archival/collage feel */
 }
+
 h1 {
-  position: relative; /* Text needs a position to use z-index */
+  position: relative; /* Allows use z-index to layer the text above the image */
   z-index: 2;
-  margin-top: 70px; /* Increase this number to move it further down */  
+  margin-top: 70px; /* Pulls the title up closer to the top bar */ 
 }
 
 img {
@@ -78,25 +77,19 @@ img {
   width: 300px;
   height: auto;
   
-  top: -40px;   /* Lower number moves it UP, higher moves it DOWN */
-  right: 450px; /* Higher number moves it LEFT, lower moves it RIGHT */
+  top: -40px;   /* controls how much the red catalogue overlaps the blue one */
+  right: 450px; /* Moves it toward the 'About Us' link */
   
   z-index: 1;  /* This keeps it behind the blue text (h1 has z-index: 2) */
-  transform: rotate(7deg);
-   /* A slight tilt to the right */
+  transform: rotate(7deg); /* A slight tilt to the right */
 }
 .subtitle {
   display: block;
-  /* Remove the -827px margin! */
   margin-left: 0; 
-  
   color: #0058AB;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
-
-  font-size: clamp(1rem, 2vw, 1.5rem); 
-  
-  /* Adjust this to control the gap between the title and subtitle */
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Scales smoothly between screen sizes */
   margin-top: 10px; 
   text-align: left;
   position: relative;
@@ -118,11 +111,11 @@ img {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100% !important;
+    width: 100%;
     display: flex;
-    flex-direction: row !important; /* Forces items into a side-by-side row */
+    flex-direction: row; /* Forces side-by-side row */
     justify-content: space-between;  /* Pushes title left and links right */
-    align-items: flex-start;        /* Aligns them to the very top */
+    align-items: flex-start; /* Aligns to the very top */
     padding: 2px; /* Adjusts padding for mobile */
     background-color: #FFDA1A;
     z-index: 1000;
@@ -130,8 +123,8 @@ img {
 }
 
 body {
-    padding-top: 50px !important; /* Adjust this value to push content below the links */
-    margin: 0 !important;
+    padding-top: 50px; /* Adds space at the top so content isn't hidden behind the fixed header */
+    margin: 0;
     width: 100%;
     overflow-x: hidden; /* Prevents the 'weird gap' on the right */
 }
